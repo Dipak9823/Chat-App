@@ -10,14 +10,14 @@ exports.login=(data,callback)=> {
              }
 
              else {
-                 console.log("in service");
+                console.log("in service");
                 callback(null,result);
              }
          })
      }catch(error) {
          callback.send(error);
      }
- }
+}
 
 exports.registration=(data,callback)=>{
 
@@ -38,12 +38,12 @@ exports.registration=(data,callback)=>{
         });
  
 }
-exports.updatepassword=(data,callback)=>{
+/*exports.updatepassword=(data,callback)=>{
 
     console.log("services use data 1",data);
-    /*usermodel.registration(req,()=>{
+    usermodel.registration(req,()=>{
         console.log("services use data 2",req);
-    });*/
+    });
    usermodel.addUser(data,(err,result)=>{
         console.log("services use data 2",data);
         if(err) {
@@ -56,4 +56,4 @@ exports.updatepassword=(data,callback)=>{
         }
     });
 
-}
+} */

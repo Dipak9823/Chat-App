@@ -18,6 +18,7 @@ const UserSchema=new schema({
     }
 });
 function UserModel(){ };
+
 const User=mongoose.model('myuser',UserSchema);
 
 
@@ -86,7 +87,7 @@ UserModel.prototype.login = (body, callback) => {
         }
     });
 }
-UserModel.prototype.updatePassword = (req, callback) => {
+/*UserModel.prototype.updatePassword = (req, callback) => {
     let newPassword = bcrypt.hashSync(req.body.Password, saltRounds);
     console.log('new pass bcrypt--', newPassword);
     user.updateOne({ _id: req.decoded.payload.user_id }, { Password: newPassword }, (err, result) => {
@@ -97,7 +98,7 @@ UserModel.prototype.updatePassword = (req, callback) => {
             callback(null, result);
         }
     });
-}
+}*/
 
 
 

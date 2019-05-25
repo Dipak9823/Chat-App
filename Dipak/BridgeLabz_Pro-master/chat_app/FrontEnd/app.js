@@ -1,19 +1,18 @@
-angular.module("abc",
-"abc.auth",
-"ngRoute"
-
-)   
-.config(function($routeProvider,$httpProvider){
+var app=angular.module('chatapp', ["ngRoute"]);
+app.config(function($routeProvider) {
     $routeProvider
-
-    .when('/signin', {
-        templateUrl: "auth/signin.html",
-        controller: 'AuthController'
+    .when("/login",{
+        url:"/login",
+        templateUrl:"template/login.html",
+        controller:"controllerLogin"
     })
-    .when('/signup',{
-        templateUrl: "auth/signup.html",
-        controller: "AuthController"
+    .when("/register",{
+        url:"/register",
+        templateUrl:"template/register.html",
+        controller:"controllerRegister"
     })
-    $httpProvider.interceptors.push('AttachTokens');
+    .otherwise({
+        redirectTo:"/"
+    });
 
 })

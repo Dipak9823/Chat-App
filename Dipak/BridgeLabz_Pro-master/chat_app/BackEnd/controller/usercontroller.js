@@ -4,7 +4,7 @@ var userService=require("../services/userservices");
 exports.registration = (req, res) => {
     try {
         console.log("controller",req.body);
-        var responseResult = {}
+        var responseResult = {} 
         userService.registration(req.body, (err, result) => {
             
             if (err) {
@@ -41,7 +41,7 @@ exports.login = (req, res) => {
         res.send(err);
     }
 }
-exports.updatepassword = (req, res) => {
+/*exports.updatepassword = (req, res) => {
     try {
         var responseResult = {};
         userService.login(req.body, (err, result) => {
@@ -59,4 +59,4 @@ exports.updatepassword = (req, res) => {
     } catch (err) {
         res.send(err);
     }
-}
+}*/
