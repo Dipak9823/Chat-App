@@ -38,6 +38,26 @@ exports.registration=(data,callback)=>{
         });
  
 }
+
+exports.forgotpass=(data,callback)=>{
+    userModel.forgotPassword(data,(err,result)=>{
+        if(err){
+            callback(err);
+        }else {
+            callback(null,result)
+        }
+    })
+}
+//reset purpose
+exports.resetpass=(req,callback)=>{
+    userModel.updateUserPassword(req,(err,result)=>{
+        if(err){
+            callback(err);
+        }else {
+            callback(null,result)
+        }
+    })
+}
 /*exports.updatepassword=(data,callback)=>{
 
     console.log("services use data 1",data);

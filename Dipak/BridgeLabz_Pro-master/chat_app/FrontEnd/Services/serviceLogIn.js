@@ -1,6 +1,6 @@
 app.service("servicelogin",function($http,$location){
 
-    var loginuser=function(data,$scope){
+    this.login=function(data,$scope){
         $http({
             method : "POST",
             url : "http://localhost:3000/login",
@@ -10,7 +10,12 @@ app.service("servicelogin",function($http,$location){
             console.log("Login successfull at serviceLogin in client side");
                 var userid = response.data.message[0]._id;
                 var name = response.data.message[0].firstname;
- 
+                localStorage.setItem("userid", userid);
+                localStorage.setItem("name", name);
+                localStorage.setItem("token",token);
+            
+                // $scope.loginMessage = "login successful";
+                $location.path('/dashboard');
            },
             function errorCallback(response){
                 alert("login unsucessfully")

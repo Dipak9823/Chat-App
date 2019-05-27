@@ -1,14 +1,23 @@
-const router = require('../BackEnd/router/routes');
+const router = require('./router/routes');
 const express = require('express');
 var bodyParser = require('body-parser');
-var frontend=require("../FrontEnd/app");
+
+
+//var frontend=require("../FrontEnd/app");
 const app = express();
+
+//app.use(cors());
 
 const databaseConfig = require('../BackEnd/configuration/DatabaseConfiguration');
 const mongoose = require('mongoose');
-app.use(bodyParser.json())
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse requests of content-type - application/json
+app.use(bodyParser.json());
+//app.use(express.static('../FrontEnd'));
 app.use('/', router);
-app.use(express.static(frontend));
+
 /*app.get('/',(req,res)=>{
     //console.log("Welcome to chatapp");
     res.send("Welcome to chatapp");

@@ -1,18 +1,31 @@
-var app=angular.module('chatapp', ["ngRoute"]);
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/login",{
-        url:"/login",
-        templateUrl:"template/login.html",
-        controller:"controllerLogin"
+var app = angular.module('chatapp', ['ui.router']);
+
+app.config(function($stateProvider, $urlRouterProvider)
+{
+   
+    $stateProvider.state('login',{
+        url:'/login',
+        templateUrl:'/templates/login.html',
+        controller:'controlLogin'
     })
-    .when("/register",{
-        url:"/register",
-        templateUrl:"template/register.html",
-        controller:"controllerRegister"
+
+    $stateProvider.state('register',{
+        url:'/register',
+        templateUrl:'templates/register.html',
+        controller:'controlRegister'
     })
-    .otherwise({
-        redirectTo:"/"
-    });
+
+    $stateProvider.state('forgotPassword',{
+        url:'/forgotPassword',
+        templateUrl:'templates/forgotPassword.html',
+        controller:'controlForgotPassword'
+   })
+
+    $stateProvider.state('resetPassword',{
+        url:'/resetPassword/:token',
+        templateUrl:'templates/resetPassword.html',
+        controller:'controlResetPassword'
+    })
+    $urlRouterProvider.otherwise('login');
 
 })

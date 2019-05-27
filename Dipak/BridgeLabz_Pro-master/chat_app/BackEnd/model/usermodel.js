@@ -1,6 +1,6 @@
 const bcrypt=require('bcrypt'); 
 const mongoose=require("mongoose");
-let saltRounds=10;
+const saltRounds = bcrypt.genSaltSync(10);
 const schema=mongoose.Schema;
 
 const UserSchema=new schema({
@@ -87,7 +87,24 @@ UserModel.prototype.login = (body, callback) => {
         }
     });
 }
-/*UserModel.prototype.updatePassword = (req, callback) => {
+UserModel.prototype.forgotPassword =(body,callback) =>{
+    console.log(body);
+    user.findOne({"Email":body.email},(err,result)=>{
+        if(err) {
+            callback(err);
+        }
+        else {
+            if(result!==null && body.email==result.email) {
+                callback(null,result);
+            }
+            else {
+                callback("inncorrect mail")
+            }
+        }
+    })
+
+}
+UserModel.prototype.updatePassword = (req, callback) => {
     let newPassword = bcrypt.hashSync(req.body.Password, saltRounds);
     console.log('new pass bcrypt--', newPassword);
     user.updateOne({ _id: req.decoded.payload.user_id }, { Password: newPassword }, (err, result) => {
@@ -98,7 +115,7 @@ UserModel.prototype.login = (body, callback) => {
             callback(null, result);
         }
     });
-}*/
+}
 
 
 

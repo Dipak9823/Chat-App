@@ -1,25 +1,30 @@
-app.service("serviceRegister",function($http,$location){
 
-    var registerUser=function(data,$scope) {
+app.service('serviceRegister', function ($http, $location) {
+
+    this.registerUser = function (data, $scope) {
+        console.log("data on service register--- ", data);
+        
         $http({
-            method:"POST",
-            url: "mongodb://localhost/register",
-            data: data    
-        })
-    }
-}).then(
-    function successCallback(res){
-        console.log("Register Successfully");
-        console.log(res);
-        $scope.message="User Register Successfully";
-        $location.path('/login');
+            method: 'POST',
+            url: 'http://localhost:3000/#!/register',
+            data: data
 
-    },
-    function errorCallback(res){
-        console.log("Error in  login Registration");
-        console.log(res);
-        $scope.message="Error while register user",
-        $location.path('/register');
-    }
-)
+        }).then(
+            function successCallback(response) {
+                alert("register successfull")
+                console.log("register successfull ");
+                console.log(response);
+                $scope.message = "register successfull";
+                $location.path('/login');
 
+            },
+            function errorCallback(response) {
+            alert("register Unsuccessfull")
+                console.log("register Unsuccessfull ");
+             $scope.message =response.data.message.message;
+
+
+            }
+        );
+    }
+});
