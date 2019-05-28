@@ -88,8 +88,9 @@ UserModel.prototype.login = (body, callback) => {
     });
 }
 UserModel.prototype.forgotPassword =(body,callback) =>{
-    console.log(body);
-    user.findOne({"Email":body.email},(err,result)=>{
+    console.log(body.Email);
+    User.findOne({"Email":body.Email},(err,result)=>{
+        console.log(body.Email);
         if(err) {
             callback(err);
         }
@@ -101,7 +102,7 @@ UserModel.prototype.forgotPassword =(body,callback) =>{
                 callback("inncorrect mail")
             }
         }
-    })
+    });
 
 }
 UserModel.prototype.updatePassword = (req, callback) => {

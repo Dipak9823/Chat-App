@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
-//app.use(express.static('../FrontEnd'));
+app.use(express.static('../FrontEnd'));
 app.use('/', router);
 
 /*app.get('/',(req,res)=>{

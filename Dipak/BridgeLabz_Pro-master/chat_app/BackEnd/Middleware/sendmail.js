@@ -5,10 +5,10 @@ exports.sendEmailFunction = (url,email) => {
         auth: {
             user: '',
             pass: ''
-        },
+        }
     });
     const mailOptions = {
-        from: '',
+        from: 'patildipak363@gmail.com',
         to: email,
         subject: 'Chat-app password reset link ',
         text: 'Click on the link provided to reset your password:\n\n' + url

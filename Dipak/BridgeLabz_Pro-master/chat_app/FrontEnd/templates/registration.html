@@ -13,18 +13,18 @@
                             <h4><p>please fill the details to register</p></h4>
  <div class="container">
      <label for="firstname"><b>FirstName</b></label>
-     <input type="text" placeholder="enter the first name" ng-model="firstname" required>
+     <input type="text" placeholder="enter the first name" ng-model="FirstName" required>
      <label for="lastname"><b>Lastname</b></label>
-     <input type="text" placeholder="enter the last name" ng-model="lastname" required>
+     <input type="text" placeholder="enter the last name" ng-model="LastName" required>
      <label for="email"><b>Email</b></label>
-     <input type="text" placeholder="enter the email" ng-model="email" required>
+     <input type="text" placeholder="enter the email" ng-model="Email" required>
      <br>
      <label for="password"><b>Password</b></label>
-     <input type="password" placeholder="enter the password" ng-model="password" required>
+     <input type="password" placeholder="enter the password" ng-model="Password" required>
      <!--<label for="password"><b>ConfirmPassword</b></label>
      <input type="password" placeholder="enter the password" ng-model="cpassword" required>-->
      </div>
-     <input type="submit" value="Submit" ng-click="register()" ng-disabled="myForm.$invalid">
+     <input type="submit" value="Submit" ng-click="registration()" ng-disabled="myForm.$invalid">
      <a href="http://localhost:3000/#!/login">login</a>
      </form>
      </div>

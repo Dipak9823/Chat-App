@@ -45,7 +45,9 @@ exports.login = (req, res) => {
 exports.forgotPassword=(req,res)=>{
     try{
         var responseresult={};
-        userservices.forgotpass(req.body,(err,result)=>{
+        console.log("Controller ",req.body);
+        userService.forgotpass(req.body,(err,result)=>{
+            console.log("controller2 ",req.body);
             if(err) {
                 responseresult.success=false;
                 responseresult.result=err;
@@ -53,13 +55,14 @@ exports.forgotPassword=(req,res)=>{
             }
             else {
                 responseresult.success=true;
-                responseresult.result=reult;
+                responseresult.result=result;
                 const payload={
                     user_id: responseresult.result._id
                 }
                 console.log(payload);
                 const obj=gettoken.generateToken(payload);
-                console.log(obj);
+                console.log("controller obj", obj);
+                const url = `http://localhost:3000/#!/resetPassword/${obj.token}`;
                 sendmail.sendEmailFunction(url,req.body.email);
                 //Send email using this token generated
                 res.status(200).send(url);

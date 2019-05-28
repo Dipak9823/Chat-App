@@ -12,7 +12,7 @@ app.controller('controlRegister', function ($scope, serviceRegister) {
             //'cpassword':$scope.cpassword,
         }
 
-        console.log("register calling", user);
+        console.log(user);
         serviceRegister.registerUser(user,$scope);
        /* if ($scope.password != $scope.cpassword) {
             $scope.message = "password does not match ";

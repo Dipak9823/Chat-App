@@ -8,6 +8,7 @@ module.exports={
             message: 'Token Generated ',
             token: token
         }
+        console.log(obj)
         return obj;
 
     }

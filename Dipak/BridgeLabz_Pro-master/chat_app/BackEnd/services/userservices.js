@@ -40,17 +40,18 @@ exports.registration=(data,callback)=>{
 }
 
 exports.forgotpass=(data,callback)=>{
-    userModel.forgotPassword(data,(err,result)=>{
+    console.log("Services used data",data);
+    usermodel.forgotPassword(data,(err,result)=>{
         if(err){
-            callback(err);
+            return callback(err);
         }else {
-            callback(null,result)
+            return callback(null,result);
         }
     })
 }
 //reset purpose
 exports.resetpass=(req,callback)=>{
-    userModel.updateUserPassword(req,(err,result)=>{
+    usermodel.updateUserPassword(req,(err,result)=>{
         if(err){
             callback(err);
         }else {

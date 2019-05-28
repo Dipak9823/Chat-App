@@ -9,9 +9,9 @@ app.config(function($stateProvider, $urlRouterProvider)
         controller:'controlLogin'
     })
 
-    $stateProvider.state('register',{
-        url:'/register',
-        templateUrl:'templates/register.html',
+    $stateProvider.state('registration',{
+        url:'/registration',
+        templateUrl:'templates/registration.html',
         controller:'controlRegister'
     })
 
