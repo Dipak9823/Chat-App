@@ -67,7 +67,7 @@ UserModel.prototype.addUser = (body, callback) => {
 UserModel.prototype.login = (body, callback) => {
     console.log("model ", body.Password," ",body.Email);
     User.findOne({ "Email": body.Email}, (err, result) => {
-        //console.log("1");
+        console.log("usermodel 1",result);
         if (err) {
             callback(err);
         }
@@ -116,6 +116,19 @@ UserModel.prototype.updatePassword = (req, callback) => {
             callback(null, result);
         }
     });
+}
+
+UserModel.prototype.getAllMsg=(data,callback)=>{
+    user.find({},(err,result)=>{
+        if(err){
+            console.log(err);
+            callback(err);
+        }
+        else{
+            console.log("all users get successfully......");
+            return callback(null,result)
+        }
+    })
 }
 
 

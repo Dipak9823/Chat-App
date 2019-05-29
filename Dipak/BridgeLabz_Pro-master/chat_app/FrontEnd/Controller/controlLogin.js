@@ -1,10 +1,12 @@
-app.controller($scope,serviceLogin);
-
-var login=function($scope){
-    var user={
-        Email : "$scope.email",
-        Password: "$scope.password"
+app.controller('controlLogin',function($scope,serviceLogIn){
+    $scope.login=function(){
+        var user={
+            'Email' : $scope.Email,
+            'Password': $scope.Password
+        }
+        console.log("In Log in");
+        console.log(user);
+        serviceLogIn.LogIn(user,$scope);
     }
-    console.log(user);
-    serviceLogin.LogIn(user,$scope);
-}
+});
+

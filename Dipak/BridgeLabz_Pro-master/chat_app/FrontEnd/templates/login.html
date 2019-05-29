@@ -13,14 +13,14 @@
                                 <h1><b>chat app</b></h1>
                            
 <!-- <h2><p>please fill the details to register</p></h2> -->
-<form name="myform" ng-controller="controlLogin">
+<form name="myform" >
     <h2><b>Username</b></h2>
 
      <!-- <label for="firstname"><b>FirstName</b></label> -->
-     <input type="text" name="email" ng-model="email" placeholder="enter email" autocomplete="on" required>
+     <input type="text" name="email" ng-model="Email" placeholder="enter email" autocomplete="on" required>
     <h2><b>Password</b></h2>
     
-     <input type="password"name="password" ng-model="password"placeholder="enter the password"minlength="8" autocomplete="on"tittle="Password contain atleast 8 or more characters"required>
+     <input type="password"name="password" ng-model="Password"placeholder="enter the password"minlength="8" autocomplete="on"tittle="Password contain atleast 8 or more characters"required>
      
      <button type="submit" value="login" ng-click="login()" class="login-button">Login</button>
      <div class="butt">

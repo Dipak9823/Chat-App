@@ -25,8 +25,10 @@ exports.registration = (req, res) => {
 }
 exports.login = (req, res) => {
     try {
+        console.log("controller",req.body);
         var responseResult = {};
         userService.login(req.body, (err, result) => {
+            console.log("Controller2",req.body);
             if (err) {
                 responseResult.success = false;
                 responseResult.error = err;
@@ -90,11 +92,30 @@ exports.resetPassword=(req,res)=>{
         }
 
     });
+    
 }catch(err) {
     res.send(err);
 }
 }
 
-
-    
-
+exports.allUsers = (req, res) => {
+            try{
+            let responseResult = {}
+            userservice.allUsersService(req.body, (err, result) => {
+                if (err) {
+                    responseResult.err = err;
+                    responseResult.status = false;
+                    res.status(500).send(responseResult)
+                }
+                else {
+                    responseResult.data = result;
+                    responseResult.status = true;
+                    console.log("hi how ",responseResult);
+                    res.status(200).send(responseResult);
+                }
+            });
+        
+        }catch(err) {
+            console.log(err);
+        }
+}

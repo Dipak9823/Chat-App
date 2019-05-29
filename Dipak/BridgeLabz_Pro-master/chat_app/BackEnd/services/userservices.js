@@ -2,7 +2,7 @@ const usermodel=require('../model/usermodel');
 
 exports.login=(data,callback)=> {
      try{
-         console.log("services use data"+data);
+         console.log("services use data",data);
          usermodel.login(data,(err,result)=>{
              if(err) {
                 console.log("Service error");                 
