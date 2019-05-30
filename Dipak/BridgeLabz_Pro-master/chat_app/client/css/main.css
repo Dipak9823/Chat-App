@@ -1,0 +1,188 @@
+
+  body {
+   
+    /*background-image:url("chat.png");*/ 
+    height: 80px; /* You must set a specified height */
+ /*background-position:center; Center the image*/
+  background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover;
+ /*background-attachment: ;*/
+ /* position:fixed; */
+
+}
+.form-div{
+   
+padding: 130px;
+
+ 
+/* bottom: -100;
+right: 200; */
+width: 150px;
+
+height:190px;
+background-color: rgb(250, 245, 245);
+ /* text-align:center;  */
+margin:70px auto;
+border-radius: 10px;
+box-shadow: 0 0 15px #030c0f;
+
+}
+button {
+   /* background-color: rgb(172, 156, 12); */
+   /* color:black; */
+   font-size: 150%;
+   padding: 15px;
+   margin: 8px auto;
+   border: none;
+   cursor: pointer;
+   width: 150px;
+   opacity: 0.9;
+   background-color:009dd3;
+  color: white;
+  border-radius: 50px;
+  font-size:15px;
+  margin: 15px;
+  }
+  button:hover {
+   opacity:1;
+   background: #0d0d0e;   
+   box-shadow: 0 0 20px;  
+  }
+
+/*.form-div img{
+   width: 120px;
+   margin-top: -250px;
+  
+} */
+.form-div h1
+{
+color: black;
+font-size:25;
+
+
+}
+.form-div h2{
+   color:#0c1e33;
+    }
+
+input[type='text'],
+input[type='password']
+{
+   text-align:center;
+  border:none;
+  outline:none;
+  background:transparent;
+  color: #96c8db;
+  border-bottom:1px solid;
+  width: 150px;
+}
+
+input[type='text']:focus,
+input[type='password']:focus
+{
+  
+   border-bottom:1px solid #080808;
+}
+input[type='password']:focus:hover
+   {
+text-shadow: 0 0 20px;
+
+   }
+::placeholder{
+ 
+   color:white;
+}
+
+input[type='submit']
+{
+background-color: teal;
+color: rgb(41, 33, 29);
+border: none;
+font-size:20px;
+margin: 15px;
+
+}
+.form-div h3{ 
+   clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   margin: auto;
+   line-height: 0.8em;
+   color: #031418;
+   font-size: 15px;
+}
+.form-div h4{
+   margin: -15px auto;
+   clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+   font-size: 18px;
+   color: white;  
+}
+   .form-div a{
+      display: -moz-inline-box;
+   
+color: #009dd3;
+   }
+   .container{
+      color:#0c1e33;
+      margin: 15px auto;
+      line-height: 1.7em;
+
+   }
+  .pass
+  {
+
+      padding: 120px;
+  position:relative;
+ 
+/* bottom: -100;
+right: 200; */
+width: 80px;
+
+height:100;
+background-color: rgba(0,0,0,0.5);
+ /* text-align:center;  */
+margin:100px auto;
+border-radius: 20px;
+box-shadow: 0 0 20px #00aeef;
+}
+
+  .pass h5{
+     
+   color: #0c1e33;
+   font-size:25;
+   margin-top:-40px;
+   line-height: 0.3em;
+
+  
+   /* margin: 15px auto; */
+
+   }
+   .pass img{
+      width: 100px;
+      margin-top: -170px;
+     
+   } 
+   .reset{
+      padding: 180px;
+      position:relative;
+     
+    /* bottom: -100;
+    right: 200; */
+    width: 120px;
+    
+    height:160;
+    background-color: rgba(0,0,0,0.5);
+     /* text-align:center;  */
+    margin:80px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00aeef;
+
+   }
+   
+
+
+ 
