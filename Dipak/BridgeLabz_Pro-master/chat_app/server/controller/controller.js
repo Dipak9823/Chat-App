@@ -19,12 +19,12 @@ module.exports.register= (req, res) => {
     if (errors) {
         response.success = false;
         response.error = errors;
-        return res.status(422).send(response);
+        return res.status(400).send(response);
  } else {
     userService.register(req.body, (err, data) => {
         if (err) {
             console.log(err);
-            return res.status(500).send({
+            return res.status(400).send({
                 message: err
             })
         } else {
