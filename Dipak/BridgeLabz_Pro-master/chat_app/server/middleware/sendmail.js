@@ -11,11 +11,11 @@ exports.sendEmailFunction = (url,email) => {
         service: 'gmail',
         auth: {
             user: '',
-            pass: 'vaibhaw@123'
+            pass: ''
         },
     });
     const mailOptions = {
-        from: 'tikhilevaibhaw19@gmail.com',
+        from: 'patildipak363@gmail.com',
         to: email,
         subject: 'Chat-app password reset link ',
         text: 'Click on the link provided to reset your password:\n\n' + url

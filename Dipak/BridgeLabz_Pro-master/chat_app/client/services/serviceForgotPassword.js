@@ -1,9 +1,9 @@
 /*****************************************************************************************************
  *@Purpose -CHATAPP
  *@file    - serviceForgotPassword.js
- *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@author  - Dipak Patil
  *@version - 1.0
- *@since   - 13/04/2019
+ *@since   - 26/05/2019
  **************************************************************************************************/
 
 app.service('serviceForgotPassword', function ($http, $location) {

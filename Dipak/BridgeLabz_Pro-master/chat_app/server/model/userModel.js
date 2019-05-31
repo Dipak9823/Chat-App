@@ -1,9 +1,9 @@
 /*****************************************************************************************************
  *@Purpose -CHATAPP
  *@file    - usermodel.js
- *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
- *@version - 1.0
- *@since   - 08/04/2019
+ *@author  - Dipak Patil
+ *@version - 1.0m
+ *@since   - 23/05/2019
  **************************************************************************************************/
 const mongoose = require('mongoose')
 var bcrypt = require('bcryptjs')

@@ -1,9 +1,9 @@
 /*****************************************************************************************************
  *@Purpose -CHATAPP
  *@file    - controlRegister.js
- *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@author  - Dipak Patil
  *@version - 1.0
- *@since   - 14/04/2019
+ *@since   - 26/05/2019
  **************************************************************************************************/
 
 app.controller('controlRegister', function ($scope, serviceRegister) {
