@@ -2,7 +2,11 @@
  *@Purpose -CHATAPP
  *@file    - usermodel.js
  *@author  - Dipak Patil
+<<<<<<< HEAD
  *@version - 1.0m
+=======
+ *@version - 1.0
+>>>>>>> d757c37f89567705041b3c76f9904fc5ee311341
  *@since   - 23/05/2019
  **************************************************************************************************/
 const mongoose = require('mongoose')

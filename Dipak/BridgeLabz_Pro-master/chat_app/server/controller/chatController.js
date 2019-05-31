@@ -3,7 +3,7 @@
  *@file    - chatController.js
  *@author  - Dipak Patil
  *@version - 1.0
- *@since   - 09/04/2019
+ *@since   - 26/05/2019
  **************************************************************************************************/
 const chatServices = require('../services/chatService')
 try {
