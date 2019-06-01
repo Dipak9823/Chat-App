@@ -44,7 +44,7 @@ type:String
 function chatModel() {
 
 }
-var chat = mongoose.model('chatInfo', chatSchema);
+var chat = mongoose.model('appuser', chatSchema);
 try {
     chatModel.prototype.addMessage = (chatData, callback) => {
         console.log('In chatmodel', chatData.senderUserId)
