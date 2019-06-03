@@ -29,6 +29,6 @@
     "start": "nodemon server.js",
     "dev": "nodemon server.js"
   },
-  "author": "Vaibhaw",
+  "author": "DipakPatil",
   "license": "ISC"
 }
